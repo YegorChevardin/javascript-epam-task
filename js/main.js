@@ -118,14 +118,10 @@ const handleInfiniteScroll = () => {
     if (infiniteScrollActive && currentPage <= pageCount) {
         // Only add more cards if the current page is within the pageCount limit
         throttle(() => {
-            const endOfPage =
-                window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+            const endOfPage = window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
             spinner.classList.add('invisible');
             if (endOfPage) {
                 addCards(data, currentPage + 1);
-            }
-            if (currentPage === pageCount) {
-                removeInfiniteScroll();
             }
         }, 1000);
     }
@@ -155,7 +151,6 @@ searchBar.addEventListener('keyup', elem => {
     if(searchBar.value) {
         let value = elem.target.value.toLowerCase();
         let filteredData = data.filter(function (el) {
-            console.log(el)
             return el.name.toLowerCase().includes(value) || el.description.toLowerCase().includes(value);
         });
         loader.replaceChildren();
@@ -170,11 +165,12 @@ searchBar.addEventListener('keyup', elem => {
     } else {
         throttleTimer = false;
         currentPage = 1;
+        checker = 0;
+        infiniteScrollActive = true;
+        window.addEventListener('scroll', scrollFunction);
         window.addEventListener('scroll', handleInfiniteScroll)
         pageCount = Math.ceil(data.length / cardIncrease);
         loader.replaceChildren();
-        checker = 0;
-        infiniteScrollActive = true;
         addCards(data, currentPage);
         scrollFunction();
     }
