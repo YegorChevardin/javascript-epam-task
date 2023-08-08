@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+body {
+    min-height: 101vh;
+}
+body, section {
+    margin: 0;
+    background-color: lightgray;
+}
+a {
+    text-decoration: none;
+    color: gray;
+}
+a:hover {
+    color: darkgray;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    color: gray;
+}
+.navbar div {
+    display: inline-flex;
+    align-items: center;
+}
+.navbar:nth-child(2) {
+    flex-grow: 2;
+}
+.navbar > div h1 {
+    font-weight: 300;
+}
+
+.navbar div input {
+    padding: 8px;
+    width: 600px;
+    border: 1px solid gray;
+    border-radius: 5px 0 0 5px;
+}
+
+.navbar div select {
+    padding: 8px;
+    border: 1px solid gray;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    color: black;
+}
+
+.material-symbols-outlined {
+    color: lightgray;
+    font-size: xx-large;
+    margin-right: 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.main-stable {
+    height: 950px;
+}
+
+.login {
+    height: 500px;
+    width: 600px;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    align-self: center;
+    justify-content: center;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.my-form > * {
+    width:  450px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+}
+.my-form h1 {
+    margin-bottom: 100px;
+    color: gray;
+    font-size: 42px;
+}
+.submit-btn {
+    background-color: #2ed28c;
+    color: white;
+    border: none;
+}
+.submit-btn:hover {
+    background-color: #2baf70;
+}
+
+.logo-div {
+    background-color: gray;
+    color: white;
+    height: 400px;
+    width: 400px;
+    font-weight: bold;
+    font-size: 36px;
+    border-radius: 50%;
+    z-index: 3;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.signup {
+    height: 450px;
+    width: 1000px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-self: center;
+    align-items: center;
+}
+
+.topic {
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.topic > * {
+    margin-left: 20px;
+}
+
+.register-form {
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 130px;
+}
+
+.sides {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: start;
+    color: gray;
+    width: 90%;
+}
+.sides > * {
+    flex: 1 0 0;
+}
+.side input,
+.side select {
+    padding: 8px;
+    height: 40px;
+    width: 400px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    background-color: white;
+}
+.side textarea {
+    padding: 8px;
+    height: 108px;
+    width: 400px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+.new-item {
+    display: flex;
+    justify-content: center;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    height: 100px;
+    width: 90%;
+    display: inline-flex;
+    align-items: start;
+    justify-content: end;
+}
+.form-buttons > button {
+    height: 40px;
+    width: 48%;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    margin-right: 4%;
+    border: 1px solid gray;
+}
+.cancel-btn:hover a {
+    color: black;
+}
+.cancel-btn div,
+.submit-btn div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.top-new > * {
+    margin-left: 150px;
+}
+
+.add-form {
+    width: 950px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-light {
+    background-color: white;
+}
+
+.cart {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart table {
+    width: 100%;
+    margin-top: 100px;
+    border-bottom: 2px solid lightgray;
+}
+.cart table tr {
+    display: flex;
+    align-items: center;
+}
+.cart table tr td:nth-child(1) {
+    max-width: 100%;
+    white-space: nowrap;
+}
+.cart table tr td:nth-child(1) img {
+    width: 150px;
+    height: 150px;
+}
+.cart table tr td:not(:nth-child(1)) {
+    padding: 30px;
+}
+.cart table tr td:nth-child(2) {
+    flex-grow: 3;
+}
+.description h1 {
+    margin-bottom: 40px;
+}
+.total-div {
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.total-div > * {
+    padding-right: 30px;
+}
+.checkout-buttons {
+    width: 100%;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.container {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.row-start {
+    justify-content: start;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+.row-evenly {
+    justify-content: space-evenly;
+}
+.image-details-holder img {
+    width: 1000px;
+    height: 450px;
+    margin-right: 30px;
+}
+.coupon {
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.description h1 {
+    font-weight: bold;
+}
+.description p {
+    color: gray;
+}
+.coupon-description {
+    width: 95%;
+    height: 50%;
+}
+.item-term {
+    margin-top: 80px;
+}
+.item-term > * {
+    margin: 3px;
+    font-weight: bold;
+}
+.item-term p:nth-child(1) {
+    color: gray;
+    font-size: small;
+}
+.item-sale {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-sale a {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+}
+.item-sale a:hover {
+    color: gray;
+}
+.description-holder {
+    width: 1000px;
+}
+
+
+.catalog {
+    margin: 50px;
+}
+.top-higher {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.category {
+    width: 150px;
+    height: 180px;
+    padding: 20px;
+}
+.image-holder {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+.main-coupon {
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    margin: 20px;
+}
+.coupon-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 0 20px 0;
+}
+.coupon-content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.coupon-content * {
+    margin: 0;
+}
+
+.smaller-description {
+    margin-top: 10px;
+    font-size: xx-small;
+}
+.cart-btn {
+    background-color: white;
+    padding: 5px;
+}
+.main-coupon a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/*Scroll top button*/
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    z-index: 99999;
+    border: none;
+    outline: none;
+    background-color: gray;
+    color: white;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-left: 15px;
+}
+#topBtn .material-symbols-outlined {
+    font-size: 42px;
+}
+#topBtn:hover {
+    background-color: #9ca1a3
+}
+.invisible {
+    display: none !important;
+}
+
+/* Loading spinner */
+#loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    height: 100px; /* Set the height and width based on your preference */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #333;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite; /* Use the 'spin' animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

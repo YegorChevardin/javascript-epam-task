@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pigsty main</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<section>
+    <div class="navbar">
+        <div>
+            <span class="material-symbols-outlined">
+                savings
+            </span>
+            <h1>Pigsty</h1>
+        </div>
+        <div>
+            <input type="text" placeholder="Search by item name" id="search" />
+            <select>
+                <option disabled selected>All categories</option>
+                <option value="1">Sport</option>
+                <option value="2">Gift cards</option>
+            </select>
+        </div>
+        <div>
+            <span class="material-symbols-outlined">
+                favorite
+            </span>
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+            <span><a href="login.html">Log in</a> | <a href="register.html">Sign up</a></span>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="topic top-higher">
+        <div class="row row-evenly">
+            <div class="category">
+                <div class="image-holder">
+                </div>
+                <h3>Category</h3>
+            </div>
+            <div class="category">
+                <div class="image-holder">
+                </div>
+                <h3>Category</h3>
+            </div>
+            <div class="category">
+                <div class="image-holder">
+                </div>
+                <h3>Category</h3>
+            </div>
+            <div class="category">
+                <div class="image-holder">
+                </div>
+                <h3>Category</h3>
+            </div>
+            <div class="category">
+                <div class="image-holder">
+                </div>
+                <h3>Category</h3>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="catalog row row-evenly" id="loader">
+        </div>
+    </div>
+    <div id="loadingSpinner" class="invisible">
+        <div class="spinner"></div>
+    </div>
+    <button onclick="topFunction()" id="topBtn" class="invisible">
+        <span class="material-symbols-outlined">
+        arrow_upward
+        </span>
+    </button>
+</section>
+<script src="../js/main.js"></script>
+</body>
+</html>
